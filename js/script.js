@@ -15,9 +15,7 @@ function clearLast(){
         let store = document.getElementById("result").value += value;
         onlyOneDot(store);
         SymbolRestrict(store);
-        if (store.length > 1){
         CheckExtraSymbols(store);
-        }
        }
 
      ////////////////// Checks symbol in the [0] //////////////////  
@@ -64,17 +62,17 @@ function clearLast(){
 
     function onlyOneDot(store){
         let last = store[store.length-1];
-         switch(last){
-         case ".":
-                document.getElementById("dot").style = "display:none;"
-                break;
-         case "+":
-          case "-":
-         case "/":
-          case "*":
+        switch(last){
+        case ".":
+            document.getElementById("dot").style = "display:none;"
+            break;
+        case "+":
+        case "-":
+        case "/":
+        case "*":
             if(store[store.length-2] != ".")
-                    document.getElementById("dot").style = "display:visible;"
-                   break;
+                document.getElementById("dot").style = "display:visible;"
+                break;
           }
      }
        
